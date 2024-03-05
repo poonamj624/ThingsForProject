@@ -1,0 +1,19 @@
+database---->vehicleConfiguration
+
+
+
+ INSERT INTO segments(seg_name) VALUES('SUV'),('Sedan'),('Truck'),('Hatchback'),('Van');
+
+
+INSERT INTO manufacturers (manu_name, seg_id) VALUES
+('Toyota', 1),
+('Honda', 2),
+('Ford', 3),
+('Chevrolet', 4),
+('Volkswagen', 5);
+
+
+INSERT INTO  models(image_path,model_name,price, mfg_id, seg_id) VALUES
+('/images/rav4.jpg','RAV4', 100,1, 1);
+.................................................................................
+Scaffold-DbContext "Server=localhost;Database=vehicleConfiguration;user id=root;password=shrisha@2018" MySql.EntityFrameworkCore -Context AppDbContext -o DbRepos -f
